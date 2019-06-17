@@ -62,31 +62,31 @@ Date,Experiment,Replicate,Device_Age,Sex,Sexual_Status,Generation,Strain,Blood_M
 21-Oct-15,3,1,2_Months,Female,Virgin,F3,COCA 02.1,NO,YES,NA,12:00:00 PM,Boric_Acid,1 g/L,10 g/L,0,30,,,,,,
 21-Oct-15,3,1,2_Months,Female,Virgin,F3,COCA 02.1,NO,YES,NA,12:00:00 PM,Boric_Acid,1 g/L,10 g/L,24,6,,,,,,
 21-Oct-15,3,1,2_Months,Female,Virgin,F3,COCA 02.1,NO,YES,NA,12:00:00 PM,Boric_Acid,1 g/L,10 g/L,48,0,,,,,,
-21-Oct-15,3,1,2_Months,Female,Virgin,F3,COCA 02.1,NO,YES,NA,12:00:00 PM,Boric_Acid,1 g/L,10 g/L,72,NA,,,,,,Experiment 1: Survival Assessment of Mosquitoes Exposed to the Device
+21-Oct-15,3,1,2_Months,Female,Virgin,F3,COCA 02.1,NO,YES,NA,12:00:00 PM,Boric_Acid,1 g/L,10 g/L,72,NA,,,,,,Experiment 1: Survival of Mosquitoes Exposed to DABS
 21-Oct-15,3,2,2_Months,Female,Virgin,F3,COCA 02.1,NO,YES,NA,12:00:00 PM,Ctrl,0 g/L,10 g/L,0,30,,,,,,
 21-Oct-15,3,2,2_Months,Female,Virgin,F3,COCA 02.1,NO,YES,NA,12:00:00 PM,Ctrl,0 g/L,10 g/L,24,29,,,,,,
 21-Oct-15,3,2,2_Months,Female,Virgin,F3,COCA 02.1,NO,YES,NA,12:00:00 PM,Ctrl,0 g/L,10 g/L,48,28,,,,,,
-21-Oct-15,3,2,2_Months,Female,Virgin,F3,COCA 02.1,NO,YES,NA,12:00:00 PM,Ctrl,0 g/L,10 g/L,72,NA,,,,,,Experiment 2: Shelf Life of the Device 38 Days storage 
+21-Oct-15,3,2,2_Months,Female,Virgin,F3,COCA 02.1,NO,YES,NA,12:00:00 PM,Ctrl,0 g/L,10 g/L,72,NA,,,,,,Experiment 2: Shelf Life of DABS: 38 Days storage 
 21-Oct-15,3,2,2_Months,Female,Virgin,F3,COCA 02.1,NO,YES,NA,12:00:00 PM,Boric_Acid,1 g/L,10 g/L,0,30,,,,,,
 21-Oct-15,3,2,2_Months,Female,Virgin,F3,COCA 02.1,NO,YES,NA,12:00:00 PM,Boric_Acid,1 g/L,10 g/L,24,5,,,,,,
 21-Oct-15,3,2,2_Months,Female,Virgin,F3,COCA 02.1,NO,YES,NA,12:00:00 PM,Boric_Acid,1 g/L,10 g/L,48,0,,,,,,
-21-Oct-15,3,2,2_Months,Female,Virgin,F3,COCA 02.1,NO,YES,NA,12:00:00 PM,Boric_Acid,1 g/L,10 g/L,72,NA,,,,,,Experiment 3: Shelf Life of the Device 80 Days storage
+21-Oct-15,3,2,2_Months,Female,Virgin,F3,COCA 02.1,NO,YES,NA,12:00:00 PM,Boric_Acid,1 g/L,10 g/L,72,NA,,,,,,Experiment 3: Shelf Life of DABS: 80 Days storage
 21-Oct-15,3,3,2_Months,Female,Virgin,F3,COCA 02.1,NO,YES,NA,12:00:00 PM,Ctrl,0 g/L,10 g/L,0,30,,,,,,
 21-Oct-15,3,3,2_Months,Female,Virgin,F3,COCA 02.1,NO,YES,NA,12:00:00 PM,Ctrl,0 g/L,10 g/L,24,30,,,,,,
 21-Oct-15,3,3,2_Months,Female,Virgin,F3,COCA 02.1,NO,YES,NA,12:00:00 PM,Ctrl,0 g/L,10 g/L,48,30,,,,,,
-21-Oct-15,3,3,2_Months,Female,Virgin,F3,COCA 02.1,NO,YES,NA,12:00:00 PM,Ctrl,0 g/L,10 g/L,72,NA,,,,,,Experiment 4: Shelf Life of the Device 118 Days storage
+21-Oct-15,3,3,2_Months,Female,Virgin,F3,COCA 02.1,NO,YES,NA,12:00:00 PM,Ctrl,0 g/L,10 g/L,72,NA,,,,,,Experiment 4: Shelf Life of DABS: 118 Days storage
 21-Oct-15,3,3,2_Months,Female,Virgin,F3,COCA 02.1,NO,YES,NA,12:00:00 PM,Boric_Acid,1 g/L,10 g/L,0,30,,,,,,
 21-Oct-15,3,3,2_Months,Female,Virgin,F3,COCA 02.1,NO,YES,NA,12:00:00 PM,Boric_Acid,1 g/L,10 g/L,24,4,,,,,,
 21-Oct-15,3,3,2_Months,Female,Virgin,F3,COCA 02.1,NO,YES,NA,12:00:00 PM,Boric_Acid,1 g/L,10 g/L,48,0,,,,,,
-21-Oct-15,3,3,2_Months,Female,Virgin,F3,COCA 02.1,NO,YES,NA,12:00:00 PM,Boric_Acid,1 g/L,10 g/L,72,NA,,,,,,Experiment 5: Effects of the phisiological status of the mosquito on the performance of the device. Unstarved blood fed
+21-Oct-15,3,3,2_Months,Female,Virgin,F3,COCA 02.1,NO,YES,NA,12:00:00 PM,Boric_Acid,1 g/L,10 g/L,72,NA,,,,,,Experiment 5: DABS Performance on Unstarved Blood Fed Mosquitoes
 01-Dec-15,4,1,3_Months,Female,Virgin,NA,COCA 02.1,NO,YES,NA,12:00:00 PM,Ctrl,0 g/L,10 g/L,0,30,,,,,,
 01-Dec-15,4,1,3_Months,Female,Virgin,NA,COCA 02.1,NO,YES,NA,12:00:00 PM,Ctrl,0 g/L,10 g/L,24,30,,,,,,
 01-Dec-15,4,1,3_Months,Female,Virgin,NA,COCA 02.1,NO,YES,NA,12:00:00 PM,Ctrl,0 g/L,10 g/L,48,29,,,,,,
-01-Dec-15,4,1,3_Months,Female,Virgin,NA,COCA 02.1,NO,YES,NA,12:00:00 PM,Ctrl,0 g/L,10 g/L,72,29,,,,,,Experiment 6:Effects of the phisiological status of the mosquito on the performance of the device. Starved blood fed
+01-Dec-15,4,1,3_Months,Female,Virgin,NA,COCA 02.1,NO,YES,NA,12:00:00 PM,Ctrl,0 g/L,10 g/L,72,29,,,,,,Experiment 6: DABS Performance on Starved Blood Fed Mosquitoes
 01-Dec-15,4,1,3_Months,Female,Virgin,NA,COCA 02.1,NO,YES,NA,12:00:00 PM,Boric_Acid,1 g/L,10 g/L,0,30,,,,,,
 01-Dec-15,4,1,3_Months,Female,Virgin,NA,COCA 02.1,NO,YES,NA,12:00:00 PM,Boric_Acid,1 g/L,10 g/L,24,30,,,,,,
 01-Dec-15,4,1,3_Months,Female,Virgin,NA,COCA 02.1,NO,YES,NA,12:00:00 PM,Boric_Acid,1 g/L,10 g/L,48,16,,,,,,
-01-Dec-15,4,1,3_Months,Female,Virgin,NA,COCA 02.1,NO,YES,NA,12:00:00 PM,Boric_Acid,1 g/L,10 g/L,72,0,,,,,,Experiment 7:Effects of the phisiological status of the mosquito on the performance of the device. Parous
+01-Dec-15,4,1,3_Months,Female,Virgin,NA,COCA 02.1,NO,YES,NA,12:00:00 PM,Boric_Acid,1 g/L,10 g/L,72,0,,,,,,Experiment 7: DABS Performance on Parous Mosquitoes
 01-Dec-15,4,2,3_Months,Female,Virgin,NA,COCA 02.1,NO,YES,NA,12:00:00 PM,Ctrl,0 g/L,10 g/L,0,30,,,,,,
 01-Dec-15,4,2,3_Months,Female,Virgin,NA,COCA 02.1,NO,YES,NA,12:00:00 PM,Ctrl,0 g/L,10 g/L,24,30,,,,,,
 01-Dec-15,4,2,3_Months,Female,Virgin,NA,COCA 02.1,NO,YES,NA,12:00:00 PM,Ctrl,0 g/L,10 g/L,48,30,,,,,,

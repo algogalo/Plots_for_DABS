@@ -3,122 +3,55 @@ import plotly
 import plotly.plotly as py
 import plotly.graph_objs as go
 Raw_Data = pd.read_csv("rawdata.csv")
+counter = 0
 
-#Plot Experiment 1
-Experiment1 = Raw_Data[Raw_Data.Experiment == 1]
-Toxin_list = []
-input_data = []
+for Experiment in Raw_Data["Experiment"].unique():
+    counter += 1
+    counter2 = 0
+    if counter == 1:
+        Expr_name = "Survival of Mosquitoes Exposed to DABS"
+    if counter == 2:
+        Expr_name = "Shelf Life of DABS 38 Days storage"
+    if counter == 3:
+        Expr_name = "Shelf Life of DABS 80 Days storage"
+    if counter == 4:
+        Expr_name = "Shelf Life of DABS 118 Days storage"
+    if counter == 5:
+        Expr_name = "DABS Performance on Unstarved Blood Fed Mosquitoes"
+    if counter == 6:
+        Expr_name = "DABS Performance on Starved Blood Fed Mosquitoes"
+    if counter == 7:
+        Expr_name = "DABS Performance on Parous Mosquitoes"
+    Ex = Raw_Data[Raw_Data.Experiment == Experiment]
+    Toxin_list = []
+    input_data = []
 
-for Toxin_type in Experiment1["Toxin"].unique():
-    Toxin_list.append(Experiment1[Experiment1.Toxin == Toxin_type])
+    for Toxin_type in Ex["Toxin"].unique():
+        Toxin_list.append(Ex[Ex.Toxin == Toxin_type])
 
-for data_toxin in Toxin_list:
-    input_data.append(go.Box(
-    x = data_toxin["Time_of_Exposure"],
-    y = data_toxin["Mosquitoes"],
-    boxpoints = "all",
-    hoverinfo = "text",
-    jitter = 0.5,
-    pointpos = -1.5,
-    text = data_toxin["Replicate"],
-    marker = dict(size = 5)
+    for data_toxin in Toxin_list:
+        counter2 += 1
+        if counter2 == 1:
+            plot_name = "Control"
+        if counter2 == 2:
+            plot_name = "Boric Acid"
+        input_data.append(go.Box(
+        x = data_toxin["Time_of_Exposure"],
+        y = data_toxin["Mosquitoes"],
+        name = plot_name,
+        boxpoints = "all",
+        hoverinfo = "text",
+        jitter = 0.5,
+        pointpos = -1.5,
+        text = data_toxin["Replicate"],
+        marker = dict(size = 5)
+        )
+        )
+    layout = go.Layout(
+        title = Expr_name,
+        boxmode = "group",
+        yaxis = dict(title = "Number of live mosquitoes"),
+        xaxis = dict(title = "Time of exposure (hours)")
     )
-    )
-layout = go.Layout(
-    title = "Experiment 1",
-    boxmode = "group",
-    yaxis = dict(title = "Number of live mosquitoes"),
-    xaxis = dict(title = "Time of exposure (hours)")
-)
-Figure  = go.Figure(data = input_data, layout = layout)
-plotly.offline.plot(Figure, filename = "Experiment1.html")
-
-#Plot Experiment 2
-
-Experiment2 = Raw_Data[Raw_Data.Experiment == 2]
-Toxin_list = []
-input_data = []
-
-for Toxin_type in Experiment2["Toxin"].unique():
-    Toxin_list.append(Experiment2[Experiment2.Toxin == Toxin_type])
-
-for data_toxin in Toxin_list:
-    input_data.append(go.Box(
-    x = data_toxin["Time_of_Exposure"],
-    y = data_toxin["Mosquitoes"],
-    boxpoints = "all",
-    hoverinfo = "text",
-    jitter = 0.5,
-    pointpos = -1.5,
-    text = data_toxin["Replicate"],
-    marker = dict(size = 5)
-    )
-    )
-layout = go.Layout(
-    title = "Experiment 2",
-    boxmode = "group",
-    yaxis = dict(title = "Number of live mosquitoes"),
-    xaxis = dict(title = "Time of exposure (hours)")
-)
-Figure  = go.Figure(data = input_data, layout = layout)
-plotly.offline.plot(Figure, filename = "Experiment2.html")
-
-#Plot Experiment 3
-
-Experiment3 = Raw_Data[Raw_Data.Experiment == 2]
-Toxin_list = []
-input_data = []
-
-for Toxin_type in Experiment3["Toxin"].unique():
-    Toxin_list.append(Experiment3[Experiment3.Toxin == Toxin_type])
-
-for data_toxin in Toxin_list:
-    input_data.append(go.Box(
-    x = data_toxin["Time_of_Exposure"],
-    y = data_toxin["Mosquitoes"],
-    boxpoints = "all",
-    hoverinfo = "text",
-    jitter = 0.5,
-    pointpos = -1.5,
-    text = data_toxin["Replicate"],
-    marker = dict(size = 5)
-    )
-    )
-layout = go.Layout(
-    title = "Experiment 3",
-    boxmode = "group",
-    yaxis = dict(title = "Number of live mosquitoes"),
-    xaxis = dict(title = "Time of exposure (hours)")
-)
-Figure  = go.Figure(data = input_data, layout = layout)
-plotly.offline.plot(Figure, filename = "Experiment3.html")
-
-#Plot Experiment 4
-
-Experiment4 = Raw_Data[Raw_Data.Experiment == 2]
-Toxin_list = []
-input_data = []
-
-for Toxin_type in Experiment4["Toxin"].unique():
-    Toxin_list.append(Experiment4[Experiment4.Toxin == Toxin_type])
-
-for data_toxin in Toxin_list:
-    input_data.append(go.Box(
-    x = data_toxin["Time_of_Exposure"],
-    y = data_toxin["Mosquitoes"],
-    boxpoints = "all",
-    hoverinfo = "text",
-    jitter = 0.5,
-    pointpos = -1.5,
-    text = data_toxin["Replicate"],
-    marker = dict(size = 5)
-    )
-    )
-layout = go.Layout(
-    title = "Experiment 4",
-    boxmode = "group",
-    yaxis = dict(title = "Number of live mosquitoes"),
-    xaxis = dict(title = "Time of exposure (hours)")
-)
-Figure  = go.Figure(data = input_data, layout = layout)
-plotly.offline.plot(Figure, filename = "Experiment4.html")
+    Figure  = go.Figure(data = input_data, layout = layout)
+    plotly.offline.plot(Figure, filename = "%s.html" % Expr_name)
