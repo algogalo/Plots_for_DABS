@@ -9,41 +9,31 @@ df = Raw_Data.loc[:,["Experiment", "Replicate", "Toxin", "Time_of_Exposure", "Mo
 
 Experiment1 = df[df.Experiment == 1]
 
-data_control = Experiment1[Experiment1.Toxin == "Ctrl"]
+Toxin_list = []
 
-data_boric_acid = Experiment1[Experiment1.Toxin == "Boric_Acid"]
+input_data = []
 
-trace0 = go.Box(
-    x = data_control["Time_of_Exposure"],
-    y = data_control["Mosquitoes"],
-    name = "Control",
+for Toxin_type in Experiment1["Toxin"].unique():
+    Toxin_list.append(Experiment1[Experiment1.Toxin == Toxin_type])
+
+for data_toxin in Toxin_list:
+    input_data.append(go.Box(
+    x = data_toxin["Time_of_Exposure"],
+    y = data_toxin["Mosquitoes"],
     boxpoints = "all",
     hoverinfo = "text",
-    jitter = 0.3,
+    jitter = 0.5,
     pointpos = -1.5,
-    text = data_control["Replicate"],
+    text = data_toxin["Replicate"],
     marker = dict(size = 5)
     )
-
-trace1 = go.Box(
-    x = data_boric_acid["Time_of_Exposure"],
-    y = data_boric_acid["Mosquitoes"],
-    name = "Boric_Acid",
-    boxpoints = "all",
-    hoverinfo = "text",
-    jitter = 0.3,
-    pointpos = -1.5,
-    text = data_boric_acid["Replicate"],
-    marker = dict(size = 5)
     )
-
-input_data = [trace0, trace1]
 
 layout = go.Layout(
     title = "Experiment 1",
     boxmode = "group",
     yaxis = dict(title = "Number of live mosquitoes"),
-    xaxis = dict(title = "Time (hours)")
+    xaxis = dict(title = "Time of exposure (hours)")
 )
 Figure  = go.Figure(data = input_data, layout = layout)
 plotly.offline.plot(Figure)
