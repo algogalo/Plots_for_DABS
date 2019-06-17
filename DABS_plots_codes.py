@@ -24,21 +24,19 @@ for Experiment in Raw_Data["Experiment"].unique():
         Expr_name = "DABS Performance on Parous Mosquitoes"
     Ex = Raw_Data[Raw_Data.Experiment == Experiment]
     Toxin_list = []
+    Toxin_name_list = []
     input_data = []
 
     for Toxin_type in Ex["Toxin"].unique():
         Toxin_list.append(Ex[Ex.Toxin == Toxin_type])
+        Toxin_name_list.append(str(Toxin_type))
 
     for data_toxin in Toxin_list:
-        counter2 += 1
-        if counter2 == 1:
-            plot_name = "Control"
-        if counter2 == 2:
-            plot_name = "Boric Acid"
+
         input_data.append(go.Box(
         x = data_toxin["Time_of_Exposure"],
         y = data_toxin["Mosquitoes"],
-        name = plot_name,
+        name = Toxin_name_list[counter2],
         boxpoints = "all",
         hoverinfo = "text",
         jitter = 0.5,
@@ -47,6 +45,7 @@ for Experiment in Raw_Data["Experiment"].unique():
         marker = dict(size = 5)
         )
         )
+        counter2 += 1
     layout = go.Layout(
         title = Expr_name,
         boxmode = "group",
