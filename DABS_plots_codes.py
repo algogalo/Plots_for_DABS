@@ -59,9 +59,13 @@ for Experiment in Raw_Data["Experiment"].unique():
         counter2 += 1
     layout = go.Layout(
         title = Expr_name,
+        autosize = False,
+        width = 1300,
+        height = 1000,
         boxmode = "group",
         yaxis = dict(title = "Number of live mosquitoes"),
-        xaxis = dict(title = "Time of exposure (hours)")
+        xaxis = dict(title = "Time of exposure (hours)"),
+        font = dict(size = 20)
     )
     Figure  = go.Figure(data = input_data, layout = layout)
     plotly.offline.plot(Figure, filename = "%s.html" % Expr_name)
