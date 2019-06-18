@@ -34,7 +34,14 @@ for Experiment in Raw_Data["Experiment"].unique():
         Toxin_name_list.append(str(Toxin_type))
 
     for data_toxin in Toxin_list:
-
+        if Toxin_name_list[counter2] == "Control":
+            color = 'rgba(93, 164, 214, 0.57)'
+        if Toxin_name_list[counter2] == "Boric Acid":
+            color = 'rgba(255, 65, 54, 0.57)'
+        if Toxin_name_list[counter2] == "Control+Ablation":
+            color = 'rgba(255, 144, 14, 0.57)'
+        if Toxin_name_list[counter2] == "Boric Acid+Ablation":
+            color = 'rgba(44, 160, 101, 0.57)'
         input_data.append(go.Box(
         x = data_toxin["Time_of_Exposure"],
         y = data_toxin["Mosquitoes"],
@@ -42,9 +49,11 @@ for Experiment in Raw_Data["Experiment"].unique():
         boxpoints = "all",
         hoverinfo = "text",
         jitter = 0.5,
+        fillcolor = color,
         pointpos = -1.5,
         text = data_toxin["Replicate"],
-        marker = dict(size = 5)
+        marker = dict(size = 5),
+        line = dict(color = color)
         )
         )
         counter2 += 1
