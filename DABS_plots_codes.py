@@ -22,6 +22,8 @@ for Experiment in Raw_Data["Experiment"].unique():
         Expr_name = "DABS Performance on Starved Blood Fed Mosquitoes"
     if counter == 7:
         Expr_name = "DABS Performance on Parous Mosquitoes"
+    if counter == 8:
+        Expr_name = "Mechanism of Toxicity"
     Ex = Raw_Data[Raw_Data.Experiment == Experiment]
     Toxin_list = []
     Toxin_name_list = []
