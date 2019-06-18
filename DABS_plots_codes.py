@@ -2,6 +2,8 @@ import pandas as pd
 import plotly
 import plotly.plotly as py
 import plotly.graph_objs as go
+from scipy.stats import ttest_ind
+
 Raw_Data = pd.read_csv("rawdata.csv")
 counter = 0
 
@@ -28,12 +30,15 @@ for Experiment in Raw_Data["Experiment"].unique():
     Toxin_list = []
     Toxin_name_list = []
     input_data = []
-
+    test_set = []
     for Toxin_type in Ex["Toxin"].unique():
         Toxin_list.append(Ex[Ex.Toxin == Toxin_type])
         Toxin_name_list.append(str(Toxin_type))
 
     for data_toxin in Toxin_list:
+        data_time = data_toxin[data_toxin.Time_of_Exposure == 48]
+        test_set.append(data_time["Mosquitoes"])
+
         if Toxin_name_list[counter2] == "Control":
             color = 'rgba(93, 164, 214, 0.57)'
         if Toxin_name_list[counter2] == "Boric Acid":
@@ -69,3 +74,5 @@ for Experiment in Raw_Data["Experiment"].unique():
     )
     Figure  = go.Figure(data = input_data, layout = layout)
     plotly.offline.plot(Figure, filename = "%s.html" % Expr_name)
+    print "T-test at 48 hours for Experiment %s" % Expr_name
+    print ttest_ind(test_set[0],test_set[1])
