@@ -15,6 +15,14 @@ for Toxin_type in Ex_8["Toxin"].unique():
 for data_toxin in Toxin_list:
     data_time = data_toxin[data_toxin.Time_of_Exposure == 48]
     array_list.append(data_time["Mosquitoes"])
+print "Descriptive Statistics 1"
+print array_list[0].describe()
+print "Descriptive Statistics 2"
+print array_list[1].describe()
+print "Descriptive Statistics 3"
+print array_list[2].describe()
+print "Descriptive Statistics 4"
+print array_list[3].describe()
 
 
 print stats.f_oneway(array_list[0], array_list[1], array_list[2],array_list[3])
