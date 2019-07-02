@@ -32,6 +32,7 @@ for Experiment in Raw_Data["Experiment"].unique():
     input_data = []
     test_set_48h = []
     test_set_24h = []
+    test_set_72h = []
     for Toxin_type in Ex["Toxin"].unique():
         Toxin_list.append(Ex[Ex.Toxin == Toxin_type])
         Toxin_name_list.append(str(Toxin_type))
@@ -41,6 +42,8 @@ for Experiment in Raw_Data["Experiment"].unique():
         test_set_48h.append(data_time_48h["Mosquitoes"])
         data_time_24h = data_toxin[data_toxin.Time_of_Exposure == 24]
         test_set_24h.append(data_time_24h["Mosquitoes"])
+        data_time_72h = data_toxin[data_toxin.Time_of_Exposure == 72]
+        test_set_72h.append(data_time_72h["Mosquitoes"])
 
         if Toxin_name_list[counter2] == "Control":
             color = 'rgba(93, 164, 214, 0.57)'
@@ -91,3 +94,10 @@ for Experiment in Raw_Data["Experiment"].unique():
     print test_set_48h[1].describe()
     print "T-test"
     print ttest_ind(test_set_48h[0],test_set_48h[1])
+    print "Statistics at 72 hours for Experiment %s" % Expr_name
+    print "Descriptive Statistics 1"
+    print test_set_72h[0].describe()
+    print "Descriptive Statistics 2"
+    print test_set_72h[1].describe()
+    print "T-test"
+    print ttest_ind(test_set_72h[0],test_set_72h[1])
