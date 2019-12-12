@@ -61,7 +61,7 @@ for Experiment in Raw_Data["Experiment"].unique():
         hoverinfo = "text",
         jitter = 0.5,
         fillcolor = color,
-        pointpos = -1.5,
+        pointpos = 0,
         text = data_toxin["Replicate"],
         marker = dict(size = 5),
         line = dict(color = color)
@@ -76,7 +76,7 @@ for Experiment in Raw_Data["Experiment"].unique():
         boxmode = "group",
         yaxis = dict(title = "Number of live mosquitoes"),
         xaxis = dict(title = "Time of exposure (hours)"),
-        font = dict(size = 20)
+        font = dict(size = 30)
     )
     Figure  = go.Figure(data = input_data, layout = layout)
     plotly.offline.plot(Figure, filename = "%s.html" % Expr_name)
