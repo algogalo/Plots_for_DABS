@@ -64,7 +64,7 @@ for Experiment in Raw_Data["Experiment"].unique():
         fillcolor = color,
         pointpos = 0,
         text = data_toxin["Replicate"],
-        marker = dict(size = 10),
+        marker = dict(size = 22),
         line = dict(color = color)
         )
         )
@@ -72,12 +72,16 @@ for Experiment in Raw_Data["Experiment"].unique():
     layout = go.Layout(
         title = Expr_name,
         autosize = False,
-        width = 1300,
-        height = 1000,
+        width = 2600,
+        height = 2000,
         boxmode = "group",
+        margin = dict(
+            l = 200,
+            b = 200,
+            t = 200),
         yaxis = dict(title = "Number of live mosquitoes"),
         xaxis = dict(title = "Time of exposure (hours)"),
-        font = dict(size = 30)
+        font = dict(size = 65)
     )
     Figure  = go.Figure(data = input_data, layout = layout)
     plotly.offline.plot(Figure, filename = "%s.html" % Expr_name)
