@@ -1,3 +1,4 @@
+#use plotly version 3.10
 import pandas as pd
 import plotly
 import plotly.plotly as py
@@ -63,7 +64,7 @@ for Experiment in Raw_Data["Experiment"].unique():
         fillcolor = color,
         pointpos = 0,
         text = data_toxin["Replicate"],
-        marker = dict(size = 5),
+        marker = dict(size = 10),
         line = dict(color = color)
         )
         )
